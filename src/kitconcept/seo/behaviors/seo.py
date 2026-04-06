@@ -18,7 +18,7 @@ class ISeo(model.Schema):
         fields=[
             "seo_title",
             "seo_description",
-            "google__preview",
+            "google_preview",
             "seo_noindex",
             "seo_canonical_url",
             "opengraph_title",
@@ -28,13 +28,13 @@ class ISeo(model.Schema):
     )
 
     directives.widget(
-        "google__preview",
+        "google_preview",
         frontendOptions={
             "widget": "googleSearchPreviewWidget",
         },
     )
 
-    google__preview = schema.Text(
+    google_preview = schema.Text(
         title=_("Search Result Preview"),
         required=False,
         missing_value=None,
