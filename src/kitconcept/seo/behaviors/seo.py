@@ -18,12 +18,26 @@ class ISeo(model.Schema):
         fields=[
             "seo_title",
             "seo_description",
+            "google_preview",
             "seo_noindex",
             "seo_canonical_url",
             "opengraph_title",
             "opengraph_description",
             "opengraph_image",
         ],
+    )
+
+    directives.widget(
+        "google_preview",
+        frontendOptions={
+            "widget": "googleSearchPreviewWidget",
+        },
+    )
+
+    google_preview = schema.Text(
+        title=_("Search Result Preview"),
+        required=False,
+        missing_value=None,
     )
 
     directives.widget(
@@ -59,7 +73,6 @@ class ISeo(model.Schema):
         ),
         required=False,
     )
-
     # https://support.google.com/webmasters/answer/93710?hl=en
     seo_noindex = schema.Bool(
         title=_("No Index"),
