@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 3.0.0a2 (2026-04-07)
+
+
+### New features:
+
+- Add preview-widget for SEO title and description google search preview @Tishasoumya-02 [#29](https://github.com/kitconcept/kitconcept.seo/issues/29)
+
 ## 3.0.0a1 (2026-01-29)
 
 
